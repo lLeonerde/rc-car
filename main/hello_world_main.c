@@ -30,7 +30,8 @@
  #define PWM_STEERING_CHANNEL     LEDC_CHANNEL_1
  #define PWM_STEERING_TIMER       LEDC_TIMER_0 // Renamed from PWM_TIMER
  #define PWM_MOTOR_TIMER          LEDC_TIMER_1 // New timer for motor
- #define PWM_RESOLUTION           LEDC_TIMER_8_BIT
+ #define PWM_RESOLUTION           LEDC_TIMER_8_BIT // For motor
+ #define PWM_STEERING_RESOLUTION  LEDC_TIMER_10_BIT // For steering
  #define PWM_STEERING_FREQ_HZ     50 // Renamed from PWM_FREQ
  #define PWM_MOTOR_FREQ_HZ        30000 // New frequency for motor
  #define MOTOR_GPIO               20  // Change to your motor control GPIO
@@ -147,19 +148,19 @@
  static void init_pwm(void) {
      // Configure steering timer
      ledc_timer_config_t steering_ledc_timer = {
-         .duty_resolution = PWM_RESOLUTION,
+        .duty_resolution = PWM_STEERING_RESOLUTION, // Use new 10-bit resolution
          .freq_hz = PWM_STEERING_FREQ_HZ, // Use renamed steering freq
          .speed_mode = LEDC_LOW_SPEED_MODE,
          .timer_num = PWM_STEERING_TIMER, // Use renamed steering timer
          .clk_cfg = LEDC_AUTO_CLK,
      };
      ledc_timer_config(&steering_ledc_timer);
-
+ 
      // Configure motor timer
      ledc_timer_config_t motor_ledc_timer = {
-         .duty_resolution = PWM_RESOLUTION,
+         .duty_resolution = PWM_RESOLUTION, 
          .freq_hz = PWM_MOTOR_FREQ_HZ,      // Use new motor freq
-         .speed_mode = LEDC_LOW_SPEED_MODE,
+         .speed_mode = LEDC_LOW_SPEED_MODE, 
          .timer_num = PWM_MOTOR_TIMER,      // Use new motor timer
          .clk_cfg = LEDC_AUTO_CLK,
      };
@@ -179,7 +180,7 @@
      // Configure steering channel
      ledc_channel_config_t steering_channel = {
          .channel    = PWM_STEERING_CHANNEL,
-         .duty       = 19, // Center position (if using 8-bit resolution)
+        .duty       = 77, // Updated for 10-bit center
          .gpio_num   = STEERING_GPIO,
          .speed_mode = LEDC_LOW_SPEED_MODE,
          .hpoint     = 0,
@@ -193,8 +194,8 @@
      // Convert throttle (0-100) to PWM duty cycle (0-255)
      uint8_t motor_duty = (car_state.throttle * 255) / 100;
      
-     // Convert steering (0-180) to PWM duty cycle (0-255)
-     uint8_t steering_duty = 13 + (car_state.steering * (26 - 13)) / 180;
+     // Convert steering (0-180) to PWM duty cycle (0-1023 for 10-bit)
+     uint32_t steering_duty = 51 + (car_state.steering * (102 - 51)) / 180;
      
      // Set duty cycles
      ledc_set_duty(LEDC_LOW_SPEED_MODE, PWM_MOTOR_CHANNEL, motor_duty);
