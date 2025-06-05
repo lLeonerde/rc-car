@@ -28,9 +28,11 @@
  // PWM configuration
  #define PWM_MOTOR_CHANNEL        LEDC_CHANNEL_0
  #define PWM_STEERING_CHANNEL     LEDC_CHANNEL_1
- #define PWM_TIMER                LEDC_TIMER_0
+ #define PWM_STEERING_TIMER       LEDC_TIMER_0 // Renamed from PWM_TIMER
+ #define PWM_MOTOR_TIMER          LEDC_TIMER_1 // New timer for motor
  #define PWM_RESOLUTION           LEDC_TIMER_8_BIT
- #define PWM_FREQ                 5000
+ #define PWM_STEERING_FREQ_HZ     50 // Renamed from PWM_FREQ
+ #define PWM_MOTOR_FREQ_HZ        30000 // New frequency for motor
  #define MOTOR_GPIO               20  // Change to your motor control GPIO
  #define STEERING_GPIO            21  // Change to your steering control GPIO
  
@@ -143,15 +145,25 @@
  
  // Setup PWM channels for motor and steering control
  static void init_pwm(void) {
-     // Configure timer
-     ledc_timer_config_t ledc_timer = {
+     // Configure steering timer
+     ledc_timer_config_t steering_ledc_timer = {
          .duty_resolution = PWM_RESOLUTION,
-         .freq_hz = PWM_FREQ,
+         .freq_hz = PWM_STEERING_FREQ_HZ, // Use renamed steering freq
          .speed_mode = LEDC_LOW_SPEED_MODE,
-         .timer_num = PWM_TIMER,
+         .timer_num = PWM_STEERING_TIMER, // Use renamed steering timer
          .clk_cfg = LEDC_AUTO_CLK,
      };
-     ledc_timer_config(&ledc_timer);
+     ledc_timer_config(&steering_ledc_timer);
+
+     // Configure motor timer
+     ledc_timer_config_t motor_ledc_timer = {
+         .duty_resolution = PWM_RESOLUTION,
+         .freq_hz = PWM_MOTOR_FREQ_HZ,      // Use new motor freq
+         .speed_mode = LEDC_LOW_SPEED_MODE,
+         .timer_num = PWM_MOTOR_TIMER,      // Use new motor timer
+         .clk_cfg = LEDC_AUTO_CLK,
+     };
+     ledc_timer_config(&motor_ledc_timer);
  
      // Configure motor channel
      ledc_channel_config_t motor_channel = {
@@ -160,18 +172,18 @@
          .gpio_num   = MOTOR_GPIO,
          .speed_mode = LEDC_LOW_SPEED_MODE,
          .hpoint     = 0,
-         .timer_sel  = PWM_TIMER,
+         .timer_sel  = PWM_MOTOR_TIMER, // Assign motor channel to motor timer
      };
      ledc_channel_config(&motor_channel);
  
      // Configure steering channel
      ledc_channel_config_t steering_channel = {
          .channel    = PWM_STEERING_CHANNEL,
-         .duty       = 128, // Center position (if using 8-bit resolution)
+         .duty       = 19, // Center position (if using 8-bit resolution)
          .gpio_num   = STEERING_GPIO,
          .speed_mode = LEDC_LOW_SPEED_MODE,
          .hpoint     = 0,
-         .timer_sel  = PWM_TIMER,
+         .timer_sel  = PWM_STEERING_TIMER, // Assign steering channel to steering timer
      };
      ledc_channel_config(&steering_channel);
  }
@@ -182,7 +194,7 @@
      uint8_t motor_duty = (car_state.throttle * 255) / 100;
      
      // Convert steering (0-180) to PWM duty cycle (0-255)
-     uint8_t steering_duty = (car_state.steering * 255) / 180;
+     uint8_t steering_duty = 13 + (car_state.steering * (26 - 13)) / 180;
      
      // Set duty cycles
      ledc_set_duty(LEDC_LOW_SPEED_MODE, PWM_MOTOR_CHANNEL, motor_duty);
