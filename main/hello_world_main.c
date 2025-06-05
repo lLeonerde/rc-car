@@ -31,7 +31,7 @@
  #define PWM_STEERING_TIMER       LEDC_TIMER_0 // Renamed from PWM_TIMER
  #define PWM_MOTOR_TIMER          LEDC_TIMER_1 // New timer for motor
  #define PWM_RESOLUTION           LEDC_TIMER_8_BIT // For motor
- #define PWM_STEERING_RESOLUTION  LEDC_TIMER_10_BIT // For steering
+ #define PWM_STEERING_RESOLUTION  LEDC_TIMER_12_BIT // For steering
  #define PWM_STEERING_FREQ_HZ     50 // Renamed from PWM_FREQ
  #define PWM_MOTOR_FREQ_HZ        30000 // New frequency for motor
  #define MOTOR_GPIO               20  // Change to your motor control GPIO
