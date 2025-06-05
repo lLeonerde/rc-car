@@ -180,14 +180,14 @@
      // Configure steering channel
      ledc_channel_config_t steering_channel = {
          .channel    = PWM_STEERING_CHANNEL,
-        .duty       = 77, // Updated for 10-bit center
+         .duty       = 77, // Updated for 10-bit center
          .gpio_num   = STEERING_GPIO,
          .speed_mode = LEDC_LOW_SPEED_MODE,
          .hpoint     = 0,
          .timer_sel  = PWM_STEERING_TIMER, // Assign steering channel to steering timer
      };
      ledc_channel_config(&steering_channel);
- }
+}
  
  // Update PWM values based on control commands
  static void update_car_control(void) {
