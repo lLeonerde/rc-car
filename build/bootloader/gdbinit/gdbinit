@@ -1,2 +1,2 @@
-source D:/rc car/rc-car/build/bootloader/gdbinit/symbols
-source D:/rc car/rc-car/build/bootloader/gdbinit/connect
+source D:/rc-car/build/bootloader/gdbinit/symbols
+source D:/rc-car/build/bootloader/gdbinit/connect
