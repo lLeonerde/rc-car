@@ -19,8 +19,9 @@
  #include "esp_bt_device.h"
  #include "esp_gatt_common_api.h"
  #include "driver/ledc.h"  // For PWM control
+ #include "esp_timer.h" // For servo auto-detach timer
  
- #define GATTS_TAG "DRIFT_CAR_BLE"
+ #define GATTS_TAG "DRIFT_CAR_B+LE"
  
  // Device name
  static char device_name[ESP_BLE_ADV_NAME_LEN_MAX] = "DRIFT_CAR";
@@ -34,8 +35,12 @@
  #define PWM_STEERING_RESOLUTION  LEDC_TIMER_12_BIT // For steering
  #define PWM_STEERING_FREQ_HZ     50 // Renamed from PWM_FREQ
  #define PWM_MOTOR_FREQ_HZ        30000 // New frequency for motor
- #define MOTOR_GPIO               20  // Change to your motor control GPIO
- #define STEERING_GPIO            21  // Change to your steering control GPIO
+ #define MOTOR_GPIO               10  // Change to your motor control GPIO
+ #define STEERING_GPIO            3  // Change to your steering control GPIO
+ #define STEERING_DEADBAND_THRESHOLD 3 // Degrees
+ #define PWM_STEERING_MIN_DUTY 225
+ #define PWM_STEERING_MAX_DUTY 390
+ #define SERVO_AUTO_DETACH_MS 50
  
  // BLE Service and Characteristic UUIDs
  #define DRIFT_CAR_SERVICE_UUID           0xABCD
@@ -70,6 +75,7 @@
      .throttle = 0,
      .steering = 90
  };
+ static esp_timer_handle_t servo_detach_timer_handle;
  static void gatts_profile_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
 
  // Profile instance
@@ -143,6 +149,20 @@
  // Forward declarations for required handling functions
  void example_write_event_env(esp_gatt_if_t gatts_if, prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param);
  void example_exec_write_event_env(prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param);
+
+ // Function to disengage the steering servo
+static void detach_steering_servo(void) {
+    esp_err_t err_stop = ledc_stop(LEDC_LOW_SPEED_MODE, PWM_STEERING_CHANNEL, 1); // Set output low when stopped
+    if (err_stop != ESP_OK) {
+        ESP_LOGE(GATTS_TAG, "Failed to stop steering servo PWM: %s", esp_err_to_name(err_stop));
+    }
+    // ESP_LOGI(GATTS_TAG, "Steering servo detached"); // Optional: for debugging
+}
+
+static void servo_detach_timer_callback(void* arg) {
+    ESP_LOGI(GATTS_TAG, "Servo auto-detach timer expired");
+    detach_steering_servo();
+}
  
  // Setup PWM channels for motor and steering control
  static void init_pwm(void) {
@@ -180,7 +200,7 @@
      // Configure steering channel
      ledc_channel_config_t steering_channel = {
          .channel    = PWM_STEERING_CHANNEL,
-         .duty       = 77, // Updated for 10-bit center
+         .duty       = (PWM_STEERING_MIN_DUTY + PWM_STEERING_MAX_DUTY) / 2, // Auto-calculated center
          .gpio_num   = STEERING_GPIO,
          .speed_mode = LEDC_LOW_SPEED_MODE,
          .hpoint     = 0,
@@ -188,24 +208,66 @@
      };
      ledc_channel_config(&steering_channel);
 }
+
+// Function to engage/update the steering servo
+static void attach_steering_servo(uint32_t duty_cycle) {
+    esp_err_t err_set_duty = ledc_set_duty(LEDC_LOW_SPEED_MODE, PWM_STEERING_CHANNEL, duty_cycle);
+    if (err_set_duty != ESP_OK) {
+        ESP_LOGE(GATTS_TAG, "Failed to set steering duty: %s", esp_err_to_name(err_set_duty));
+    }
+    esp_err_t err_update_duty = ledc_update_duty(LEDC_LOW_SPEED_MODE, PWM_STEERING_CHANNEL);
+    if (err_update_duty != ESP_OK) {
+        ESP_LOGE(GATTS_TAG, "Failed to update steering duty: %s", esp_err_to_name(err_update_duty));
+    }
+    // ESP_LOGI(GATTS_TAG, "Steering servo attached/updated, duty: %u", (unsigned int)duty_cycle); // Optional: for debugging
+}
+
+
  
  // Update PWM values based on control commands
  static void update_car_control(void) {
+     static uint8_t last_commanded_steering_angle = 90; // Initialized to center
+ 
      // Convert throttle (0-100) to PWM duty cycle (0-255)
      uint8_t motor_duty = (car_state.throttle * 255) / 100;
      
-     // Convert steering (0-180) to PWM duty cycle (0-1023 for 10-bit)
-     uint32_t steering_duty = 51 + (car_state.steering * (102 - 51)) / 180;
-     
-     // Set duty cycles
+     // Set motor duty cycle first (unrelated to steering deadband)
      ledc_set_duty(LEDC_LOW_SPEED_MODE, PWM_MOTOR_CHANNEL, motor_duty);
      ledc_update_duty(LEDC_LOW_SPEED_MODE, PWM_MOTOR_CHANNEL);
-     
-     ledc_set_duty(LEDC_LOW_SPEED_MODE, PWM_STEERING_CHANNEL, steering_duty);
-     ledc_update_duty(LEDC_LOW_SPEED_MODE, PWM_STEERING_CHANNEL);
-     
-     ESP_LOGI(GATTS_TAG, "Car control updated - Throttle: %d, Steering: %d", 
-              car_state.throttle, car_state.steering);
+
+     // Steering deadband logic
+     if (abs(car_state.steering - last_commanded_steering_angle) > STEERING_DEADBAND_THRESHOLD) {
+         uint32_t steering_duty = PWM_STEERING_MIN_DUTY + (car_state.steering * (PWM_STEERING_MAX_DUTY - PWM_STEERING_MIN_DUTY)) / 180;
+         
+         // Stop any existing timer before starting a new sequence
+         esp_err_t err_timer_stop = esp_timer_stop(servo_detach_timer_handle);
+         if (err_timer_stop == ESP_OK) {
+             // ESP_LOGI(GATTS_TAG, "Previously running servo_detach_timer stopped."); // Optional debug log
+         } else if (err_timer_stop == ESP_ERR_INVALID_STATE) {
+             // This means the timer was not running, which is fine.
+             // ESP_LOGI(GATTS_TAG, "servo_detach_timer was not running, no need to stop."); // Optional debug log
+         } else {
+             ESP_LOGE(GATTS_TAG, "Failed to stop servo_detach_timer: %s", esp_err_to_name(err_timer_stop));
+         }
+
+         attach_steering_servo(steering_duty); // This function now handles set_duty and update_duty
+         
+         // Start/Restart the one-shot timer to detach the servo later
+         esp_err_t err_timer_start = esp_timer_start_once(servo_detach_timer_handle, SERVO_AUTO_DETACH_MS * 1000); // Convert ms to microseconds
+         if (err_timer_start != ESP_OK) {
+             ESP_LOGE(GATTS_TAG, "Failed to start servo detach timer: %s", esp_err_to_name(err_timer_start));
+         }
+         
+         last_commanded_steering_angle = car_state.steering;
+
+         ESP_LOGI(GATTS_TAG, "Steering updated to %d (Duty: %u). Detach timer started for %d ms.", 
+                  car_state.steering, (unsigned int)steering_duty, SERVO_AUTO_DETACH_MS);
+     } else {
+         // Steering change is within deadband. Servo state is not actively changed here.
+         // If timer was running, it will continue. If servo was detached, it stays detached.
+         ESP_LOGI(GATTS_TAG, "Steering change (to %d) within deadband from %d. Servo state unchanged by this command.", 
+                  car_state.steering, last_commanded_steering_angle);
+     }
  }
  
  // Parse control commands from BLE
@@ -688,6 +750,22 @@
      // Initialize PWM
      init_pwm();
      
+     esp_timer_create_args_t servo_detach_timer_args = {
+        .callback = &servo_detach_timer_callback,
+        .name = "servo_detach_timer"
+        // .arg = NULL, // Optional, can be omitted if NULL
+        // .dispatch_method = ESP_TIMER_TASK, // Default
+        // .skip_unhandled_events = false, // Default
+    };
+
+    esp_err_t err_timer_create = esp_timer_create(&servo_detach_timer_args, &servo_detach_timer_handle);
+    if (err_timer_create != ESP_OK) {
+        ESP_LOGE(GATTS_TAG, "Failed to create servo detach timer: %s", esp_err_to_name(err_timer_create));
+        // Handle error, perhaps by not continuing if timer is critical
+    } else {
+        ESP_LOGI(GATTS_TAG, "Servo detach timer created");
+    }
+
      // Set initial car state (stopped, centered)
      car_state.throttle = 0;
      car_state.steering = 90;

@@ -2906,3 +2906,316 @@
 8380	8669	7708415341440756	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
 8669	8753	7708415341473464	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
 8669	8753	7708415341473464	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+131	320	7708417556514483	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+131	320	7708417556514483	bootloader/bootloader.elf	b677461d76fb4e60
+131	320	7708417556514483	bootloader/bootloader.bin	b677461d76fb4e60
+131	320	7708417556514483	bootloader/bootloader.map	b677461d76fb4e60
+131	320	7708417556514483	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+131	320	7708417556514483	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+131	320	7708417556514483	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+131	320	7708417556514483	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+321	358	7708417558533120	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+321	358	7708417558533120	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+358	443	7708417559680616	CMakeFiles/bootloader-complete	965cf81f648f303f
+358	443	7708417559680616	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+358	443	7708417559680616	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+358	443	7708417559680616	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+125	542	7708417556514483	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+543	618	7708417560666720	esp-idf/main/libmain.a	eec784af966301f5
+618	8514	7708417640163767	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+618	8514	7708417640163767	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+8514	9458	7708417640330355	rc-car.elf	2098853d12b09bba
+9459	9812	7708417653361412	.bin_timestamp	a0bdd86b543df652
+9459	9812	7708417653361412	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+9812	9971	7708417653437611	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+9812	9971	7708417653437611	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+156	308	7708418786614664	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+156	308	7708418786614664	bootloader/bootloader.elf	b677461d76fb4e60
+156	308	7708418786614664	bootloader/bootloader.bin	b677461d76fb4e60
+156	308	7708418786614664	bootloader/bootloader.map	b677461d76fb4e60
+156	308	7708418786614664	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+156	308	7708418786614664	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+156	308	7708418786614664	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+156	308	7708418786614664	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+309	343	7708418788143120	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+309	343	7708418788143120	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+343	423	7708418789228483	CMakeFiles/bootloader-complete	965cf81f648f303f
+343	423	7708418789228483	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+343	423	7708418789228483	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+343	423	7708418789228483	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+151	537	7708418786563734	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+538	633	7708418790447080	esp-idf/main/libmain.a	eec784af966301f5
+633	7569	7708418860398339	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+633	7569	7708418860398339	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7570	8433	7708418860751938	rc-car.elf	2098853d12b09bba
+8433	8769	7708418872661029	.bin_timestamp	a0bdd86b543df652
+8433	8769	7708418872661029	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8769	8909	7708418872743753	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8769	8909	7708418872743753	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+103	252	7708419993350906	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+103	252	7708419993350906	bootloader/bootloader.elf	b677461d76fb4e60
+103	252	7708419993350906	bootloader/bootloader.bin	b677461d76fb4e60
+103	252	7708419993350906	bootloader/bootloader.map	b677461d76fb4e60
+103	252	7708419993350906	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+103	252	7708419993350906	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+103	252	7708419993350906	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+103	252	7708419993350906	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+252	288	7708419994829053	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+252	288	7708419994829053	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+288	371	7708419995936435	CMakeFiles/bootloader-complete	965cf81f648f303f
+288	371	7708419995936435	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+288	371	7708419995936435	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+288	371	7708419995936435	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+98	461	7708419993290871	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+462	530	7708419996926090	esp-idf/main/libmain.a	eec784af966301f5
+530	7423	7708420066091858	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+530	7423	7708420066091858	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7424	8258	7708420066506261	rc-car.elf	2098853d12b09bba
+8258	8538	7708420077560156	.bin_timestamp	a0bdd86b543df652
+8258	8538	7708420077560156	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8538	8641	7708420077677260	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8538	8641	7708420077677260	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+122	280	7708422235170159	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+122	280	7708422235170159	bootloader/bootloader.elf	b677461d76fb4e60
+122	280	7708422235170159	bootloader/bootloader.bin	b677461d76fb4e60
+122	280	7708422235170159	bootloader/bootloader.map	b677461d76fb4e60
+122	280	7708422235170159	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+122	280	7708422235170159	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+122	280	7708422235170159	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+122	280	7708422235170159	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+281	315	7708422236837085	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+281	315	7708422236837085	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+315	385	7708422237818570	CMakeFiles/bootloader-complete	965cf81f648f303f
+315	385	7708422237818570	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+315	385	7708422237818570	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+315	385	7708422237818570	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+116	459	7708422235170159	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+460	548	7708422238633478	esp-idf/main/libmain.a	eec784af966301f5
+107	258	7708422296996452	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+107	258	7708422296996452	bootloader/bootloader.elf	b677461d76fb4e60
+107	258	7708422296996452	bootloader/bootloader.bin	b677461d76fb4e60
+107	258	7708422296996452	bootloader/bootloader.map	b677461d76fb4e60
+107	258	7708422296996452	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+107	258	7708422296996452	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+107	258	7708422296996452	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+107	258	7708422296996452	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+258	292	7708422298578831	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+258	292	7708422298578831	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+292	373	7708422299654827	CMakeFiles/bootloader-complete	965cf81f648f303f
+292	373	7708422299654827	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+292	373	7708422299654827	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+292	373	7708422299654827	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+101	6930	7708422364981103	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+101	6930	7708422364981103	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+6930	7743	7708422365248143	rc-car.elf	2098853d12b09bba
+7743	8007	7708422376022985	.bin_timestamp	a0bdd86b543df652
+7743	8007	7708422376022985	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8008	8096	7708422376078488	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8008	8096	7708422376078488	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+142	302	7708428089440756	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+142	302	7708428089440756	bootloader/bootloader.elf	b677461d76fb4e60
+142	302	7708428089440756	bootloader/bootloader.bin	b677461d76fb4e60
+142	302	7708428089440756	bootloader/bootloader.map	b677461d76fb4e60
+142	302	7708428089440756	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+142	302	7708428089440756	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+142	302	7708428089440756	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+142	302	7708428089440756	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+303	339	7708428091044559	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+303	339	7708428091044559	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+339	415	7708428092143928	CMakeFiles/bootloader-complete	965cf81f648f303f
+339	415	7708428092143928	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+339	415	7708428092143928	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+339	415	7708428092143928	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+136	524	7708428089311175	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+524	591	7708428093298689	esp-idf/main/libmain.a	eec784af966301f5
+591	7399	7708428161745927	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+591	7399	7708428161745927	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7400	8093	7708428161943763	rc-car.elf	2098853d12b09bba
+8094	8378	7708428171562586	.bin_timestamp	a0bdd86b543df652
+8094	8378	7708428171562586	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8378	8469	7708428171770526	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8378	8469	7708428171770526	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+485	944	7713808895461413	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+485	944	7713808895461413	bootloader/bootloader.elf	b677461d76fb4e60
+485	944	7713808895461413	bootloader/bootloader.bin	b677461d76fb4e60
+485	944	7713808895461413	bootloader/bootloader.map	b677461d76fb4e60
+485	944	7713808895461413	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+485	944	7713808895461413	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+485	944	7713808895461413	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+485	944	7713808895461413	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+945	1015	7713808900102372	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+945	1015	7713808900102372	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+1015	1397	7713808904023211	CMakeFiles/bootloader-complete	965cf81f648f303f
+1015	1397	7713808904023211	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+1015	1397	7713808904023211	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+1015	1397	7713808904023211	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+140	299	7713809598278772	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+140	299	7713809598278772	bootloader/bootloader.elf	b677461d76fb4e60
+140	299	7713809598278772	bootloader/bootloader.bin	b677461d76fb4e60
+140	299	7713809598278772	bootloader/bootloader.map	b677461d76fb4e60
+140	299	7713809598278772	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+140	299	7713809598278772	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+140	299	7713809598278772	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+140	299	7713809598278772	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+299	339	7713809599860429	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+299	339	7713809599860429	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+339	413	7713809600902167	CMakeFiles/bootloader-complete	965cf81f648f303f
+339	413	7713809600902167	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+339	413	7713809600902167	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+339	413	7713809600902167	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+133	845	7713809598209860	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+845	1162	7713809605310278	esp-idf/main/libmain.a	eec784af966301f5
+1162	11131	7713809707733578	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+1162	11131	7713809707733578	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+11132	13242	7713809708091466	rc-car.elf	2098853d12b09bba
+13242	13669	7713809733495798	.bin_timestamp	a0bdd86b543df652
+13242	13669	7713809733495798	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+13670	13768	7713809733586408	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+13670	13768	7713809733586408	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+139	242	7713810164048536	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+139	242	7713810164048536	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+132	294	7713810163881489	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+132	294	7713810163881489	bootloader/bootloader.elf	b677461d76fb4e60
+132	294	7713810163881489	bootloader/bootloader.bin	b677461d76fb4e60
+132	294	7713810163881489	bootloader/bootloader.map	b677461d76fb4e60
+132	294	7713810163881489	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+132	294	7713810163881489	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+132	294	7713810163881489	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+132	294	7713810163881489	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+294	334	7713810165605537	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+294	334	7713810165605537	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+334	406	7713810166576743	CMakeFiles/bootloader-complete	965cf81f648f303f
+334	406	7713810166576743	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+334	406	7713810166576743	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+334	406	7713810166576743	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+132	244	7713811064513366	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+132	244	7713811064513366	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+124	293	7713811064513366	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+124	293	7713811064513366	bootloader/bootloader.elf	b677461d76fb4e60
+124	293	7713811064513366	bootloader/bootloader.bin	b677461d76fb4e60
+124	293	7713811064513366	bootloader/bootloader.map	b677461d76fb4e60
+124	293	7713811064513366	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+124	293	7713811064513366	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+124	293	7713811064513366	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+124	293	7713811064513366	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+293	328	7713811066190969	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+293	328	7713811066190969	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+328	398	7713811067207739	CMakeFiles/bootloader-complete	965cf81f648f303f
+328	398	7713811067207739	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+328	398	7713811067207739	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+328	398	7713811067207739	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+143	302	7713820023837295	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+143	302	7713820023837295	bootloader/bootloader.elf	b677461d76fb4e60
+143	302	7713820023837295	bootloader/bootloader.bin	b677461d76fb4e60
+143	302	7713820023837295	bootloader/bootloader.map	b677461d76fb4e60
+143	302	7713820023837295	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+143	302	7713820023837295	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+143	302	7713820023837295	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+143	302	7713820023837295	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+303	338	7713820025501234	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+303	338	7713820025501234	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+338	411	7713820026525104	CMakeFiles/bootloader-complete	965cf81f648f303f
+338	411	7713820026525104	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+338	411	7713820026525104	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+338	411	7713820026525104	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+134	508	7713820023837295	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+508	600	7713820027607159	esp-idf/main/libmain.a	eec784af966301f5
+601	7734	7713820099499650	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+601	7734	7713820099499650	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7735	8557	7713820099867773	rc-car.elf	2098853d12b09bba
+8558	8880	7713820111258260	.bin_timestamp	a0bdd86b543df652
+8558	8880	7713820111258260	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8880	9010	7713820111341059	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8880	9010	7713820111341059	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+148	315	7713824327527872	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+148	315	7713824327527872	bootloader/bootloader.elf	b677461d76fb4e60
+148	315	7713824327527872	bootloader/bootloader.bin	b677461d76fb4e60
+148	315	7713824327527872	bootloader/bootloader.map	b677461d76fb4e60
+148	315	7713824327527872	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+148	315	7713824327527872	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+148	315	7713824327527872	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+148	315	7713824327527872	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+315	355	7713824329152779	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+315	355	7713824329152779	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+355	437	7713824330329728	CMakeFiles/bootloader-complete	965cf81f648f303f
+355	437	7713824330329728	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+355	437	7713824330329728	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+355	437	7713824330329728	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+140	565	7713824327372010	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+566	651	7713824331694020	esp-idf/main/libmain.a	eec784af966301f5
+651	7876	7713824404397181	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+651	7876	7713824404397181	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7876	8743	7713824404712365	rc-car.elf	2098853d12b09bba
+8744	9050	7713824416459964	.bin_timestamp	a0bdd86b543df652
+8744	9050	7713824416459964	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+9050	9160	7713824416511304	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+9050	9160	7713824416511304	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+142	306	7713824585157047	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+142	306	7713824585157047	bootloader/bootloader.elf	b677461d76fb4e60
+142	306	7713824585157047	bootloader/bootloader.bin	b677461d76fb4e60
+142	306	7713824585157047	bootloader/bootloader.map	b677461d76fb4e60
+142	306	7713824585157047	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+142	306	7713824585157047	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+142	306	7713824585157047	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+142	306	7713824585157047	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+306	346	7713824586934246	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+306	346	7713824586934246	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+346	506	7713824588840304	CMakeFiles/bootloader-complete	965cf81f648f303f
+346	506	7713824588840304	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+346	506	7713824588840304	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+346	506	7713824588840304	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+134	614	7713824585157047	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+614	693	7713824590020214	esp-idf/main/libmain.a	eec784af966301f5
+693	7718	7713824660650369	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+693	7718	7713824660650369	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7719	8616	7713824660968686	rc-car.elf	2098853d12b09bba
+8616	8911	7713824672920582	.bin_timestamp	a0bdd86b543df652
+8616	8911	7713824672920582	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8912	9014	7713824672978244	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8912	9014	7713824672978244	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+145	310	7713841248001384	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+145	310	7713841248001384	bootloader/bootloader.elf	b677461d76fb4e60
+145	310	7713841248001384	bootloader/bootloader.bin	b677461d76fb4e60
+145	310	7713841248001384	bootloader/bootloader.map	b677461d76fb4e60
+145	310	7713841248001384	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+145	310	7713841248001384	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+145	310	7713841248001384	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+145	310	7713841248001384	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+310	346	7713841249702571	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+310	346	7713841249702571	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+346	435	7713841250929005	CMakeFiles/bootloader-complete	965cf81f648f303f
+346	435	7713841250929005	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+346	435	7713841250929005	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+346	435	7713841250929005	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+137	559	7713841248001384	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+560	631	7713841252263140	esp-idf/main/libmain.a	eec784af966301f5
+631	7894	7713841325228770	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+631	7894	7713841325228770	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7895	8702	7713841325473034	rc-car.elf	2098853d12b09bba
+8703	9020	7713841336645723	.bin_timestamp	a0bdd86b543df652
+8703	9020	7713841336645723	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+9020	9120	7713841336861592	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+9020	9120	7713841336861592	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+123	280	7713843201894563	bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+123	280	7713843201894563	bootloader/bootloader.elf	b677461d76fb4e60
+123	280	7713843201894563	bootloader/bootloader.bin	b677461d76fb4e60
+123	280	7713843201894563	bootloader/bootloader.map	b677461d76fb4e60
+123	280	7713843201894563	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b677461d76fb4e60
+123	280	7713843201894563	D:/rc car/rc-car/build/bootloader/bootloader.elf	b677461d76fb4e60
+123	280	7713843201894563	D:/rc car/rc-car/build/bootloader/bootloader.bin	b677461d76fb4e60
+123	280	7713843201894563	D:/rc car/rc-car/build/bootloader/bootloader.map	b677461d76fb4e60
+280	316	7713843203537646	bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+280	316	7713843203537646	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	917ea4daf11840c9
+317	397	7713843204677945	CMakeFiles/bootloader-complete	965cf81f648f303f
+317	397	7713843204677945	bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+317	397	7713843204677945	D:/rc car/rc-car/build/CMakeFiles/bootloader-complete	965cf81f648f303f
+317	397	7713843204677945	D:/rc car/rc-car/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	965cf81f648f303f
+116	501	7713843201894563	esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj	e3816a39648d8598
+502	579	7713843205817647	esp-idf/main/libmain.a	eec784af966301f5
+579	7619	7713843276531130	esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+579	7619	7713843276531130	D:/rc car/rc-car/build/esp-idf/esp_system/ld/sections.ld	2e9808604a3c6465
+7619	8428	7713843276871858	rc-car.elf	2098853d12b09bba
+8429	8775	7713843288479233	.bin_timestamp	a0bdd86b543df652
+8429	8775	7713843288479233	D:/rc car/rc-car/build/.bin_timestamp	a0bdd86b543df652
+8775	8875	7713843288479233	esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
+8775	8875	7713843288479233	D:/rc car/rc-car/build/esp-idf/esptool_py/CMakeFiles/app_check_size	672ba3ac339884d9
