@@ -337,7 +337,6 @@ static void attach_steering_servo(uint32_t duty_cycle) {
  }
  
  // GATTS profile event handler
- // GATTS profile event handler
  static void gatts_profile_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
     switch (event) {
         case ESP_GATTS_REG_EVT:
@@ -457,12 +456,6 @@ static void attach_steering_servo(uint32_t duty_cycle) {
                 break; // Exit if desc add failed
             }
 
-            // --- Check if this was the CCCD for the CONTROL characteristic ---
-            // We infer this because it's the first CCCD we tried to add.
-            // A more robust way would be to store state, but this works for this simple sequence.
-            // We need to identify which characteristic this descriptor belongs to.
-            // Simplest here: If the status characteristic handle is not yet set, assume this descriptor
-            // belongs to the control char, and now it's time to add the status char.
             if (gl_profile_tab[PROFILE_APP_ID].status_char_handle == 0) { // Check if status char handle is uninitialized (or use a state flag)
                ESP_LOGI(GATTS_TAG, "Control CCCD added. Now adding Status Characteristic.");
 
