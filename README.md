@@ -1,53 +1,60 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
+# Carrinho de drift utilizando ESP32-C3, BLE e FlutterFlow
 
-# Hello World Example
+![[RC car]](https://i.imgur.com/usEm5dq.jpeg)
 
-Starts a FreeRTOS task to print "Hello World".
+Um projeto de carrinho de controle remoto miniatura 1:48 para drifts utilizando BLE do esp32c3 pelo ESP-IDF.
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+Neste repositório estara apenas o firmware do carrinho, sem arquivos de PCB ou aplicativo.
 
-## How to use example
+---
 
-Follow detailed instructions provided specifically for this example.
+## Features Principais
 
-Select the instructions depending on Espressif chip installed on your development board:
+-   **Controle Preciso:** Direção e aceleração proporcionais para manobras de drift controladas.
+-   **Conectividade Moderna:** Comunicação via Bluetooth Low Energy (BLE) para baixo consumo e resposta rápida.
+-   **Hardware Customizado:** Uma PCB projetada especificamente para este projeto, otimizando espaço e conexões.
+---
 
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
+## Tecnologias Utilizadas
+
+-   **Hardware:**
+    -   Microcontrolador: **ESP32-C3**
+    -   Motor coreless: `[2010 12-6v 18000RPM]`
+    -   Bateria: `[Ex: LiPo 1S 3.7V]`
+-   **Firmware (ESP32):**
+    -   Linguagem: **C**
+    -   Framework: **ESP-IDF**
+    -   IDE: **ESP-IDF** com Visual Studio Code
+-   **Design da PCB:**
+    -   Software: `[Ex: Proteus 8]`
+-   **Aplicativo Mobile:**
+    -   Plataforma: **FlutterFlow**
+    -   Linguagem: **Dart**
+    -   Framework: **Flutter**
+
+---
+### Placa de Circuito Impresso (PCB)
+
+A PCB foi desenhada no `Proteus` para integrar todos os componentes de forma compacta.
+Design customizado baseado na placa do esp32c3 super mini.
+
+![pcb proteus](https://i.imgur.com/oKrwqQO.png)
+![pcb montada](https://i.imgur.com/hwDu0bI.png)
+---
+
+##  Firmware (ESP32-C3)
+
+O firmware é responsável por receber os comandos do aplicativo via BLE e controlar os motores e o servo.
 
 
-## Example folder contents
+##  Melhorias Futuras (To-Do)
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+-   [ ]  Refazer placa para chip comportar Bluetooth classic
+-   [ ]  Melhora na modelagem 3D e impressão de resina
+-   [ ]  Diminuir para 1:64 e virar um kit de montagem de RC car para hotwheels
+-   [ ]  Otimizar o consumo de energia da bateria.
+---
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
-
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
-
-## Troubleshooting
-
-* Program upload failure
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-## Technical support and feedback
-
-Please use the following feedback channels:
-
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
-
-We will get back to you as soon as possible.
+##  Contato
+`[Leonardo Borbon]` - `[leo.rborbon@gmail.com]`
+Link do Projeto: `[https://github.com/seu_usuario/seu_repositorio]`
