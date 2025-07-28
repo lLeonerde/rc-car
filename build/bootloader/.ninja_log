@@ -173,6 +173,7 @@
 23	124	7708414507810460	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
 20	114	7708415256620135	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
 20	114	7708415256620135	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+<<<<<<< HEAD
 =======
 16	197	7708732109372667	esp-idf/log/CMakeFiles/__idf_log.dir/src/log_timestamp_common.c.obj	ca6502ed383954c5
 28	159	7708732109490313	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj	8c3560a60c2eabc5
@@ -391,3 +392,35 @@
 21	92	7708760736353976	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	78b3a3eeae41f62e
 21	92	7708760736353976	D:/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	78b3a3eeae41f62e
 >>>>>>> main
+=======
+20	132	7708417557248438	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+20	132	7708417557248438	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+13	104	7708418787131175	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+13	104	7708418787131175	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+12	102	7708419993823388	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+12	102	7708419993823388	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+20	112	7708422235815635	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+20	112	7708422235815635	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	108	7708422297594721	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	108	7708422297594721	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+22	115	7708428090060202	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+22	115	7708428090060202	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+100	302	7713808897971973	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+100	302	7713808897971973	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	113	7713809598745190	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	113	7713809598745190	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+24	115	7713810164589245	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+24	115	7713810164589245	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+28	118	7713811065165109	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+28	118	7713811065165109	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	109	7713820024503144	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	109	7713820024503144	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+21	117	7713824328116095	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+21	117	7713824328116095	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	115	7713824585835217	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+19	115	7713824585835217	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+21	116	7713841248719015	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+21	116	7713841248719015	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+20	111	7713843202592812	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+20	111	7713843202592812	D:/rc car/rc-car/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	f2cea6d596e1115e
+>>>>>>> 7c6dd7eed764a432d7d6ce80d8e69eb1583162a2
